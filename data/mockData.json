@@ -1,0 +1,750 @@
+{
+  "dashboard": {
+    "metrics": {
+      "totalPayers": {
+        "value": 100,
+        "change": 5,
+        "changeType": "increase",
+        "period": "quarter"
+      },
+      "livesCovered": {
+        "value": 8.4,
+        "unit": "M",
+        "change": 300,
+        "changeUnit": "K",
+        "changeType": "increase",
+        "period": "quarter"
+      },
+      "totalPolicies": {
+        "value": 760,
+        "policiesPerPayer": 7.6
+      },
+      "codeCoverage": {
+        "value": 65,
+        "unit": "%",
+        "change": 2,
+        "changeType": "increase",
+        "period": "quarter",
+        "details": {
+          "covered": 65,
+          "priorAuth": 25,
+          "notCovered": 10
+        }
+      },
+      "recentChanges": {
+        "value": 27,
+        "change": 8,
+        "changeType": "increase",
+        "period": "30 days"
+      }
+    },
+    "distributions": {
+      "payerType": {
+        "commercial": 42,
+        "medicare": 28,
+        "medicaid": 18,
+        "other": 12
+      },
+      "policyByPayerType": {
+        "commercial": 320,
+        "medicare": 240,
+        "medicaid": 150,
+        "other": 50
+      },
+      "geographic": {
+        "northeast": 35,
+        "west": 28,
+        "southeast": 20,
+        "midwest": 12,
+        "southwest": 5
+      }
+    },
+    "insights": [
+      {
+        "type": "growth",
+        "title": "Top Growing Payer",
+        "description": "UnitedHealth showed the highest growth at 15% this quarter, adding 275K new covered lives.",
+        "actionText": "View Payer Details",
+        "actionLink": "/payers/unitedhealth"
+      },
+      {
+        "type": "opportunity",
+        "title": "Policy Standardization Opportunity",
+        "description": "Found 15 policies with inconsistent language across payers. Standardizing could improve clarity by 40%.",
+        "actionText": "View Policy Analysis",
+        "actionLink": "/policies/standardization"
+      },
+      {
+        "type": "opportunity",
+        "title": "Code Coverage Opportunity",
+        "description": "Converting prior auth codes to covered for preventive services could increase coverage ratio to 72%.",
+        "actionText": "View Code Analysis",
+        "actionLink": "/codes/opportunities"
+      }
+    ],
+    "filters": {
+      "timeRanges": ["Last 30 Days", "Last 3 Months", "Last 6 Months", "Last 12 Months", "Year to Date"],
+      "codeTypes": ["All Codes", "CPT Only", "HCPCS Only"]
+    },
+    "charts": {
+      "trendData": [
+        { "name": "Jan", "value": 65, "target": 70 },
+        { "name": "Feb", "value": 68, "target": 72 },
+        { "name": "Mar", "value": 75, "target": 75 },
+        { "name": "Apr", "value": 82, "target": 78 },
+        { "name": "May", "value": 85, "target": 80 },
+        { "name": "Jun", "value": 87, "target": 82 }
+      ],
+      "stackedBarData": [
+        { "name": "Q1", "approved": 120, "pending": 45, "rejected": 15 },
+        { "name": "Q2", "approved": 145, "pending": 35, "rejected": 12 },
+        { "name": "Q3", "approved": 165, "pending": 30, "rejected": 10 },
+        { "name": "Q4", "approved": 180, "pending": 25, "rejected": 8 }
+      ],
+      "radarData": [
+        { "subject": "Coverage", "current": 85, "benchmark": 75, "fullMark": 100 },
+        { "subject": "Compliance", "current": 92, "benchmark": 85, "fullMark": 100 },
+        { "subject": "Efficiency", "current": 78, "benchmark": 80, "fullMark": 100 },
+        { "subject": "Accuracy", "current": 88, "benchmark": 82, "fullMark": 100 },
+        { "subject": "Timeliness", "current": 72, "benchmark": 75, "fullMark": 100 }
+      ],
+      "funnelData": [
+        { "name": "Submissions", "value": 1200, "fill": "#449CFB" },
+        { "name": "Reviews", "value": 850, "fill": "#0071EA" },
+        { "name": "Approvals", "value": 650, "fill": "#F087FB" },
+        { "name": "Implementations", "value": 450, "fill": "#8A287F" },
+        { "name": "Renewals", "value": 300, "fill": "#4D4D4D" }
+      ],
+      "heatmapData": {
+        "Week 1-Mon": 9,
+        "Week 1-Tue": 12,
+        "Week 1-Wed": 16,
+        "Week 1-Thu": 11,
+        "Week 1-Fri": 13,
+        "Week 1-Sat": 6,
+        "Week 1-Sun": 4,
+        "Week 2-Mon": 8,
+        "Week 2-Tue": 11,
+        "Week 2-Wed": 13,
+        "Week 2-Thu": 10,
+        "Week 2-Fri": 9,
+        "Week 2-Sat": 4,
+        "Week 2-Sun": 3,
+        "Week 3-Mon": 7,
+        "Week 3-Tue": 10,
+        "Week 3-Wed": 14,
+        "Week 3-Thu": 9,
+        "Week 3-Fri": 12,
+        "Week 3-Sat": 5,
+        "Week 3-Sun": 2,
+        "Week 4-Mon": 6,
+        "Week 4-Tue": 9,
+        "Week 4-Wed": 15,
+        "Week 4-Thu": 11,
+        "Week 4-Fri": 8,
+        "Week 4-Sat": 4,
+        "Week 4-Sun": 3,
+        "Week 5-Mon": 5,
+        "Week 5-Tue": 8,
+        "Week 5-Wed": 12,
+        "Week 5-Thu": 7,
+        "Week 5-Fri": 10,
+        "Week 5-Sat": 3,
+        "Week 5-Sun": 2
+      },
+      "policyEffectivenessData": [
+        { "name": "Orthopedic", "effectiveness": 85, "adoption": 72 },
+        { "name": "Cardiology", "effectiveness": 78, "adoption": 65 },
+        { "name": "Oncology", "effectiveness": 92, "adoption": 80 },
+        { "name": "Neurology", "effectiveness": 70, "adoption": 58 },
+        { "name": "Pediatrics", "effectiveness": 88, "adoption": 75 }
+      ]
+    }
+  },
+  "allPolicies": {
+    "title": "Policy Command Center",
+    "subtitle": "Overview of your policy landscape and recent activities",
+    "metrics": {
+      "activePolicies": {
+        "value": 243,
+        "change": "12 from last month",
+        "changeType": "increase",
+        "icon": "FileText",
+        "iconBgColor": "bg-blue-50",
+        "iconColor": "text-blue-600"
+      },
+      "needReview": {
+        "value": 18,
+        "change": "5 new this week",
+        "changeType": "increase",
+        "icon": "Clock",
+        "iconBgColor": "bg-orange-50",
+        "iconColor": "text-orange-500"
+      },
+      "recentUpdates": {
+        "value": 7,
+        "subtitle": "In the last 7 days",
+        "icon": "History",
+        "iconBgColor": "bg-purple-50",
+        "iconColor": "text-purple-500"
+      },
+      "complianceScore": {
+        "value": "92%",
+        "change": "3% from last quarter",
+        "changeType": "increase",
+        "icon": "CheckCircle",
+        "iconBgColor": "bg-emerald-50",
+        "iconColor": "text-emerald-500"
+      }
+    },
+    "timeline": [
+      {
+        "title": "Telehealth Coverage Policy",
+        "description": "Policy #THC-2025-42 has been published after approval",
+        "status": "Published",
+        "statusColor": "bg-emerald-100 text-emerald-800",
+        "icon": "CheckCircle",
+        "iconBg": "bg-emerald-100",
+        "iconColor": "text-emerald-500",
+        "author": {
+          "initials": "AS",
+          "name": "Anne Smith",
+          "color": "bg-purple-500"
+        },
+        "time": "Today, 10:42 AM"
+      },
+      {
+        "title": "Specialty Drug Prior Auth",
+        "description": "Regulatory change affecting 3 specialty drug policies detected",
+        "status": "Policy Alert",
+        "statusColor": "bg-amber-100 text-amber-800",
+        "icon": "Clock",
+        "iconBg": "bg-amber-100",
+        "iconColor": "text-amber-500",
+        "author": {
+          "initials": "AI",
+          "name": "AI Detection",
+          "color": "bg-blue-500"
+        },
+        "time": "Today, 9:15 AM"
+      },
+      {
+        "title": "DME Coverage Guidelines",
+        "description": "Policy #DME-2024-17 is under review by Medical Director",
+        "status": "Review",
+        "statusColor": "bg-blue-100 text-blue-800",
+        "icon": "Eye",
+        "iconBg": "bg-blue-100",
+        "iconColor": "text-blue-500",
+        "author": {
+          "initials": "JR",
+          "name": "James Rodriguez",
+          "color": "bg-slate-500"
+        },
+        "time": "Yesterday, 4:22 PM"
+      },
+      {
+        "title": "Behavioral Health Services",
+        "description": "New draft created for upcoming behavioral health policy update",
+        "status": "Draft Created",
+        "statusColor": "bg-purple-100 text-purple-800",
+        "icon": "FileText",
+        "iconBg": "bg-purple-100",
+        "iconColor": "text-purple-500",
+        "author": {
+          "initials": "ML",
+          "name": "Maria Lopez",
+          "color": "bg-emerald-500"
+        },
+        "time": "Yesterday, 1:07 PM"
+      }
+    ],
+    "alerts": [
+      {
+        "title": "Critical Regulatory Update",
+        "description": "CMS final rule affecting Medicare Part D prior auth timelines",
+        "time": "1h ago",
+        "color": "#ef4444",
+        "actions": {
+          "primary": { "label": "Take Action", "color": "#ef4444" },
+          "secondary": { "label": "View Impact" }
+        }
+      },
+      {
+        "title": "Policy Conflict Detected",
+        "description": "Conflict between Specialty Drug and Pharmacy Benefit policies",
+        "time": "3h ago",
+        "color": "#f97316",
+        "actions": {
+          "primary": { "label": "Resolve", "color": "#f97316" },
+          "secondary": { "label": "View Details" }
+        }
+      },
+      {
+        "title": "Pending Reviews (5)",
+        "description": "5 policies awaiting your review before deadline",
+        "time": "Today",
+        "color": "#eab308",
+        "actions": {
+          "primary": { "label": "Review Now", "color": "#ca8a04" },
+          "secondary": { "label": "See List" }
+        }
+      },
+      {
+        "title": "Policy Expiring Soon",
+        "description": "Inpatient Mental Health Coverage policy expires in 3 days",
+        "time": "3 days",
+        "color": "#3b82f6",
+        "actions": {
+          "primary": { "label": "Renew", "color": "#3b82f6" },
+          "secondary": { "label": "View Policy" }
+        }
+      }
+    ]
+  },
+  "needsReview": {
+    "title": "Search Policies",
+    "subtitle": "Browse all payers policies, and compare them against each other.",
+    "totalPolicies": 18,
+    "columns": [
+      { "id": "policyName", "label": "Policy Name", "sortable": true },
+      { "id": "payer", "label": "Payer", "sortable": true },
+      { "id": "clinicalCategory", "label": "Clinical Category", "sortable": true },
+      { "id": "spendUnderManagement", "label": "Spend Under Management", "sortable": true },
+      { "id": "expDenialValue", "label": "Exp. Denial Value", "sortable": true },
+      { "id": "lastUpdated", "label": "Last Updated", "sortable": true }
+    ],
+    "policies": [
+      {
+        "id": "1",
+        "policyName": "Tocilizumab (Actemra)",
+        "payer": {
+          "name": "BCBSSC",
+          "logo": "bcbs"
+        },
+        "clinicalCategory": "Orthopedic",
+        "spendUnderManagement": "$0.1 PMPM",
+        "expDenialValue": "$0.1 PMPM",
+        "lastUpdated": "Invalid date"
+      },
+      {
+        "id": "2",
+        "policyName": "Actemra (Tocilizumab) Injection For Intravenous Infusion Commercial Medical Benefit Drug Policy",
+        "payer": {
+          "name": "United Healthcare",
+          "logo": "united"
+        },
+        "clinicalCategory": "Orthopedic",
+        "spendUnderManagement": "$0.1 PMPM",
+        "expDenialValue": "$0.1 PMPM",
+        "lastUpdated": "30 Jun 2024"
+      },
+      {
+        "id": "3",
+        "policyName": "Situxumab (Sylvant) - Cpb 0884",
+        "payer": {
+          "name": "Aetna",
+          "logo": "aetna"
+        },
+        "clinicalCategory": "Hematologic",
+        "spendUnderManagement": "$1.7 PMPM",
+        "expDenialValue": "$0.3 PMPM",
+        "lastUpdated": "28 Apr 2024"
+      },
+      {
+        "id": "4",
+        "policyName": "Maximum Dosage And Frequency Commercial Medical Benefit Drug Policy",
+        "payer": {
+          "name": "United Healthcare",
+          "logo": "united"
+        },
+        "clinicalCategory": "Medication",
+        "spendUnderManagement": "$18.2 PMPM",
+        "expDenialValue": "$8.2 PMPM",
+        "lastUpdated": "31 Jul 2024"
+      },
+      {
+        "id": "5",
+        "policyName": "Tocilizumab Intravenous - (Ip0228)",
+        "payer": {
+          "name": "Cigna",
+          "logo": "cigna"
+        },
+        "clinicalCategory": "Orthopedic",
+        "spendUnderManagement": "$0.0 PMPM",
+        "expDenialValue": "$0.0 PMPM",
+        "lastUpdated": "14 Jul 2024"
+      },
+      {
+        "id": "6",
+        "policyName": "Tocilizumab Subcutaneous - (Ip0227)",
+        "payer": {
+          "name": "Cigna",
+          "logo": "cigna"
+        },
+        "clinicalCategory": "Allergy",
+        "spendUnderManagement": "$0.0 PMPM",
+        "expDenialValue": "$0.0 PMPM",
+        "lastUpdated": "Invalid date"
+      },
+      {
+        "id": "7",
+        "policyName": "Provider Administered Drugs Site Of Care Commercial Medical Benefit Drug Policy",
+        "payer": {
+          "name": "United Healthcare",
+          "logo": "united"
+        },
+        "clinicalCategory": "Medication",
+        "spendUnderManagement": "$10.3 PMPM",
+        "expDenialValue": "$5.6 PMPM",
+        "lastUpdated": "30 Jun 2024"
+      },
+      {
+        "id": "8",
+        "policyName": "Tocilizumab And Associated Biosimilar(S)",
+        "payer": {
+          "name": "HCSC",
+          "logo": "hcsc"
+        },
+        "clinicalCategory": "Orthopedic",
+        "spendUnderManagement": "$0.6 PMPM",
+        "expDenialValue": "$0.4 PMPM",
+        "lastUpdated": "31 Jul 2024"
+      }
+    ],
+    "suggestions": ["actemra", "actemra medication"]
+  },
+  "recentUpdates": {
+    "title": "Services comparison",
+    "subtitle": "Compare coverage criteria across policies for recently updated services.",
+    "policies": [
+      {
+        "id": "policy1",
+        "name": "Actemra (Tocilizumab)",
+        "bgColor": "bg-blue-50"
+      },
+      {
+        "id": "policy2",
+        "name": "Tocilizumab And Associated Biosimilar(S)",
+        "bgColor": "bg-amber-50"
+      },
+      {
+        "id": "policy3",
+        "name": "Actemra Subcutaneous",
+        "bgColor": "bg-blue-50"
+      },
+      {
+        "id": "policy4",
+        "name": "Tocilizumab Intravenous",
+        "bgColor": "bg-primary-50"
+      },
+      {
+        "id": "policy5",
+        "name": "Sylvant (Siltuximab)",
+        "bgColor": "bg-blue-50"
+      }
+    ],
+    "services": [
+      {
+        "id": "service1",
+        "name": "Actemra (tocilizumab) injection for intravenous infusion for systemic juvenile idiopathic arthritis (85% confidence match)",
+        "status": {
+          "policy1": { "status": "Criteria established", "type": "covered" },
+          "policy2": { "status": "Criteria established", "type": "covered" },
+          "policy3": { "status": "Criteria established", "type": "covered" },
+          "policy4": { "status": "Criteria established", "type": "covered" },
+          "policy5": { "status": "Not in policy", "type": "not-covered" }
+        }
+      },
+      {
+        "id": "service2",
+        "name": "Actemra (tocilizumab) injection for intravenous infusion for giant cell arteritis (85% confidence match)",
+        "status": {
+          "policy1": { "status": "Criteria established", "type": "covered" },
+          "policy2": { "status": "Criteria established", "type": "covered" },
+          "policy3": { "status": "Criteria established", "type": "covered" },
+          "policy4": { "status": "Criteria established", "type": "covered" },
+          "policy5": { "status": "Not in policy", "type": "not-covered" }
+        }
+      },
+      {
+        "id": "service3",
+        "name": "Actemra (tocilizumab) injection for intravenous infusion for polyarticular juvenile idiopathic arthritis (85% confidence match)",
+        "status": {
+          "policy1": { "status": "Criteria established", "type": "covered" },
+          "policy2": { "status": "Criteria established", "type": "covered" },
+          "policy3": { "status": "Criteria established", "type": "covered" },
+          "policy4": { "status": "Criteria established", "type": "covered" },
+          "policy5": { "status": "Not in policy", "type": "not-covered" }
+        }
+      },
+      {
+        "id": "service4",
+        "name": "Actemra (tocilizumab) injection for intravenous infusion for rheumatoid arthritis (82% confidence match)",
+        "status": {
+          "policy1": { "status": "Criteria established", "type": "covered" },
+          "policy2": { "status": "Criteria established", "type": "covered" },
+          "policy3": { "status": "Criteria established", "type": "covered" },
+          "policy4": { "status": "Criteria established", "type": "covered" },
+          "policy5": { "status": "Not in policy", "type": "not-covered" }
+        }
+      },
+      {
+        "id": "service5",
+        "name": "Actemra (tocilizumab) injection for intravenous infusion for cytokine release syndrome (76% confidence match)",
+        "status": {
+          "policy1": { "status": "Criteria established", "type": "covered" },
+          "policy2": { "status": "Criteria established", "type": "covered" },
+          "policy3": { "status": "Criteria established", "type": "covered" },
+          "policy4": { "status": "Criteria established", "type": "covered" },
+          "policy5": { "status": "Not in policy", "type": "not-covered" }
+        }
+      },
+      {
+        "id": "service6",
+        "name": "Actemra (tocilizumab) injection for intravenous infusion for acute graft-versus-host disease",
+        "status": {
+          "policy1": { "status": "Criteria established", "type": "covered" },
+          "policy2": { "status": "Not in policy", "type": "not-covered" },
+          "policy3": { "status": "Criteria established", "type": "covered" },
+          "policy4": { "status": "Criteria established", "type": "covered" },
+          "policy5": { "status": "Not in policy", "type": "not-covered" }
+        }
+      },
+      {
+        "id": "service7",
+        "name": "Actemra (tocilizumab) injection for intravenous infusion for immune checkpoint inhibitor-related toxicities",
+        "status": {
+          "policy1": { "status": "Criteria established", "type": "covered" },
+          "policy2": { "status": "Not in policy", "type": "not-covered" },
+          "policy3": { "status": "Criteria established", "type": "covered" },
+          "policy4": { "status": "Criteria established", "type": "covered" },
+          "policy5": { "status": "Not in policy", "type": "not-covered" }
+        }
+      },
+      {
+        "id": "service8",
+        "name": "Intravenous administration of Tocilizumab (Actemra) for any other indications (including outpatient COVID-19)",
+        "status": {
+          "policy1": { "status": "Not in policy", "type": "not-covered" },
+          "policy2": { "status": "Criteria established", "type": "covered" },
+          "policy3": { "status": "Not in policy", "type": "not-covered" },
+          "policy4": { "status": "Criteria established", "type": "covered" },
+          "policy5": { "status": "Not in policy", "type": "not-covered" }
+        }
+      }
+    ]
+  },
+  "bookmarked": {
+    "title": "Bookmarked Policies",
+    "subtitle": "Your saved policies and payers for quick access.",
+    "metrics": {
+      "totalPayers": {
+        "value": 2,
+        "label": "Total Payers"
+      },
+      "livesCovered": {
+        "value": "-",
+        "label": "Lives Covered"
+      },
+      "totalPolicies": {
+        "value": 14,
+        "label": "Total Policies",
+        "subtitle": "In the last 30 days"
+      },
+      "recentChanges": {
+        "value": 3,
+        "label": "Recent Changes",
+        "subtitle": "3 in the last 30 days"
+      }
+    },
+    "payerDistribution": {
+      "commercial": 50,
+      "medicare": 30,
+      "medicaid": 20
+    },
+    "policyDistribution": {
+      "categories": ["Manager", "60-70 %", "≥ 80 %"],
+      "columns": ["MEDICAL", "PROTAR", "PROVIDER", "PHARMACY", "DENTAL", "VISION"],
+      "data": [
+        {
+          "category": "Manager",
+          "values": {
+            "MEDICAL": "M",
+            "PROTAR": "Me",
+            "PROVIDER": "T",
+            "PHARMACY": "P",
+            "DENTAL": "D",
+            "VISION": "V"
+          },
+          "colors": {
+            "MEDICAL": "bg-blue-500 text-white",
+            "PROTAR": "bg-white text-slate-800 border border-slate-200",
+            "PROVIDER": "bg-white text-slate-800 border border-slate-200",
+            "PHARMACY": "bg-primary-500 text-white",
+            "DENTAL": "bg-white text-slate-800 border border-slate-200",
+            "VISION": "bg-white text-slate-800 border border-slate-200"
+          }
+        },
+        {
+          "category": "60-70 %",
+          "values": {
+            "MEDICAL": "70",
+            "PROTAR": "70",
+            "PROVIDER": "60",
+            "PHARMACY": "65",
+            "DENTAL": "68",
+            "VISION": "62"
+          },
+          "colors": {
+            "MEDICAL": "bg-amber-400 text-white",
+            "PROTAR": "bg-amber-400 text-white",
+            "PROVIDER": "bg-green-400 text-white",
+            "PHARMACY": "bg-amber-400 text-white",
+            "DENTAL": "bg-amber-400 text-white",
+            "VISION": "bg-green-400 text-white"
+          }
+        },
+        {
+          "category": "≥ 80 %",
+          "values": {
+            "MEDICAL": "80",
+            "PROTAR": "70",
+            "PROVIDER": "83",
+            "PHARMACY": "85",
+            "DENTAL": "75",
+            "VISION": "82"
+          },
+          "colors": {
+            "MEDICAL": "bg-yellow-400 text-white",
+            "PROTAR": "bg-green-400 text-white",
+            "PROVIDER": "bg-green-400 text-white",
+            "PHARMACY": "bg-yellow-400 text-white",
+            "DENTAL": "bg-green-400 text-white",
+            "VISION": "bg-green-400 text-white"
+          }
+        }
+      ]
+    },
+    "payerDetails": [
+      {
+        "columns": [
+          { "id": "checkbox", "label": "", "type": "checkbox" },
+          { "id": "payerName", "label": "PAYER NAME", "type": "text" },
+          { "id": "type", "label": "TYPE", "type": "text" },
+          { "id": "national", "label": "NATIONAL", "type": "text" },
+          { "id": "policies", "label": "POLICIES", "type": "text" }
+        ],
+        "data": [
+          {
+            "id": "1",
+            "checkbox": true,
+            "payerName": "BCBSNC",
+            "type": "Commercial",
+            "national": "N",
+            "policies": "88%"
+          },
+          {
+            "id": "2",
+            "checkbox": true,
+            "payerName": "United",
+            "type": "National",
+            "national": "6",
+            "policies": "63%"
+          }
+        ]
+      },
+      {
+        "columns": [
+          { "id": "checkbox", "label": "", "type": "checkbox" },
+          { "id": "payerName", "label": "PAYER NAME", "type": "text" },
+          { "id": "type", "label": "TYPE", "type": "text" },
+          { "id": "national", "label": "NATIONAL", "type": "text" },
+          { "id": "avgCoverage", "label": "AVG COVERAGE", "type": "text" }
+        ],
+        "data": [
+          {
+            "id": "1",
+            "checkbox": true,
+            "payerName": "BCBSNC",
+            "type": "Commercial",
+            "national": "N",
+            "avgCoverage": "70%"
+          },
+          {
+            "id": "2",
+            "checkbox": true,
+            "payerName": "United",
+            "type": "National",
+            "national": "6",
+            "avgCoverage": "83%"
+          }
+        ]
+      }
+    ],
+    "codeCoverage": {
+      "percentage": 60,
+      "details": {
+        "covered": 60,
+        "priorAuth": 30,
+        "notCovered": 10
+      }
+    },
+    "codeExplorer": {
+      "columns": [
+        { "id": "hcpcs", "label": "HCPCS", "type": "text" },
+        { "id": "code", "label": "CODE", "type": "text" },
+        { "id": "covered", "label": "COVERED", "type": "status" }
+      ],
+      "data": [
+        {
+          "id": "1",
+          "hcpcs": "00100",
+          "code": "Anesth, procedures on spit gl",
+          "covered": "Covered"
+        },
+        {
+          "id": "2",
+          "hcpcs": "00102",
+          "code": "Anesth, repair of cleft lip",
+          "covered": "Covered\nNot Covered"
+        }
+      ]
+    }
+  },
+  "codeCoverage": {
+    "performanceSnapshot": {
+      "cptCodesWithGuidelines": {
+        "value": 4417,
+        "benchmark": 17580
+      },
+      "eiuCptCodes": {
+        "value": 72,
+        "benchmark": 3736
+      },
+      "servicesDefined": {
+        "value": 1270,
+        "benchmark": 7298
+      }
+    },
+    "spendUnderManagement": [
+      { "name": "1", "value": 49 },
+      { "name": "2", "value": 58 },
+      { "name": "3", "value": 58 },
+      { "name": "4", "value": 66 },
+      { "name": "5", "value": 73 },
+      { "name": "6", "value": 87, "highlighted": true },
+      { "name": "7", "value": 97 },
+      { "name": "8", "value": 100 },
+      { "name": "9", "value": 104 },
+      { "name": "10", "value": 124 },
+      { "name": "11", "value": 202 }
+    ],
+    "topMissingCodes": [
+      { "code": "74177", "value": 85 },
+      { "code": "J9271", "value": 78 },
+      { "code": "J3380", "value": 65 },
+      { "code": "C1776", "value": 45 }
+    ]
+  }
+}
