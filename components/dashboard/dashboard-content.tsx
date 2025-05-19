@@ -1,6 +1,5 @@
 import { MetricsGrid } from "@/components/dashboard/metrics-grid"
 import { DistributionCharts } from "@/components/dashboard/distribution-charts"
-import { GeographicDistribution } from "@/components/dashboard/geographic-distribution"
 import { CodeCoverageStatus } from "@/components/dashboard/code-coverage-status"
 import { InsightsSection } from "@/components/dashboard/insights-section"
 import { TrendLineChart } from "@/components/dashboard/trend-line-chart"
@@ -10,6 +9,7 @@ import { FunnelChart } from "@/components/dashboard/funnel-chart"
 import { HeatmapChart } from "@/components/dashboard/heatmap-chart"
 import { PolicyEffectivenessChart } from "@/components/dashboard/policy-effectiveness-chart"
 import mockData from "@/data/mockData.json"
+import { BubbleChart } from "@/components/dashboard/bubble-chart"
 
 export function DashboardContent() {
   // Get chart data from mockData
@@ -29,7 +29,7 @@ export function DashboardContent() {
 
       {/* Second row of charts */}
       <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
-        <GeographicDistribution distribution={mockData.dashboard.distributions.geographic} />
+        <BubbleChart data={mockData.dashboard.charts.bubbleChartData} title="Policy Distribution by Specialty" />
         <CodeCoverageStatus
           coverage={mockData.dashboard.metrics.codeCoverage}
           filters={mockData.dashboard.filters.codeTypes}

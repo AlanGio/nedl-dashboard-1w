@@ -158,6 +158,12 @@
         { "name": "Oncology", "effectiveness": 92, "adoption": 80 },
         { "name": "Neurology", "effectiveness": 70, "adoption": 58 },
         { "name": "Pediatrics", "effectiveness": 88, "adoption": 75 }
+      ],
+      "bubbleChartData": [
+        { "name": "Orthopedic", "adoptionRate": 72, "coverageRate": 85, "policyCount": 120, "color": "#449CFB" },
+        { "name": "Cardiology", "adoptionRate": 65, "coverageRate": 78, "policyCount": 95, "color": "#F087FB" },
+        { "name": "Neurology", "adoptionRate": 58, "coverageRate": 70, "policyCount": 85, "color": "#8A287F" },
+        { "name": "Pediatrics", "adoptionRate": 75, "coverageRate": 88, "policyCount": 110, "color": "#4D4D4D" }
       ]
     }
   },
