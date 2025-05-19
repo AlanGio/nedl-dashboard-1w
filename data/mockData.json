@@ -746,5 +746,15 @@
       { "code": "J3380", "value": 65 },
       { "code": "C1776", "value": 45 }
     ]
-  }
+  },
+  "chatAnswers": [
+    "Based on our analysis, policy coverage has increased by 15% in the last quarter.",
+    "The most common clinical category in your policies is Orthopedic, representing 42% of all policies.",
+    "Your average code coverage is 65%, which is 5% higher than the industry average.",
+    "We recommend reviewing your Medication policies as they have the highest denial rates.",
+    "There are 18 policies that need review, with 5 marked as high priority.",
+    "The Northeast region shows the highest concentration of payers in your network.",
+    "Your compliance score has improved by 3% since the last assessment.",
+    "We've detected a potential opportunity to standardize language across similar policies."
+  ]
 }

@@ -6,8 +6,11 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Healthcare Analytics Dashboard",
+  title: "Nedl Labs :: Healthcare Analytics Dashboard",
   description: "Modern healthcare analytics dashboard with metrics and insights",
+  icons: {
+    icon: "/favicon.ico",
+  },
     generator: 'v0.dev'
 }
 
