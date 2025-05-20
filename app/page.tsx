@@ -4,7 +4,7 @@ import { useState } from "react"
 import { DashboardHeader } from "@/components/dashboard/dashboard-header"
 import { SidebarNavigation } from "@/components/sidebar/sidebar-navigation"
 import { DashboardViews } from "@/components/dashboard/dashboard-views"
-import { ChatBox } from "@/components/chat/chat-box"
+import { FloatingChat } from "@/components/chat/floating-chat"
 
 export default function Dashboard() {
   const [activeView, setActiveView] = useState<string | null>(null)
@@ -37,7 +37,7 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-      <ChatBox />
+      <FloatingChat />
     </div>
   )
 }
