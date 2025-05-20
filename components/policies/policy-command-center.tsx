@@ -25,10 +25,10 @@ function MetricCard({
   iconColor = "text-primary-600",
 }: MetricCardProps) {
   return (
-    <div className="rounded-lg border bg-white p-5 shadow-sm">
+    <div className="rounded-lg border bg-white p-5 shadow-custom">
       <div className="flex items-center justify-between">
         <h3 className="text-xs font-medium text-slate-500">{title}</h3>
-        <div className={cn("rounded-full p-2", iconBgColor)}>
+        <div className={cn("rounded-full p-2 no-shadow", iconBgColor)}>
           <div className={iconColor}>{icon}</div>
         </div>
       </div>
@@ -68,17 +68,17 @@ interface TimelineItemProps {
 function TimelineItem({ title, description, status, statusColor, icon, iconBg, author, time }: TimelineItemProps) {
   return (
     <div className="flex gap-4 py-4 pl-4">
-      <div className={cn("flex h-10 w-10 items-center justify-center rounded-full", iconBg)}>{icon}</div>
+      <div className={cn("flex h-10 w-10 items-center justify-center rounded-full no-shadow", iconBg)}>{icon}</div>
       <div className="flex-1">
         <div className="flex items-center gap-2">
           <h4 className="text-sm font-medium">{title}</h4>
-          <span className={cn("rounded-md px-2 py-0.5 text-xs font-medium", statusColor)}>{status}</span>
+          <span className={cn("rounded-md px-2 py-0.5 text-xs font-medium no-shadow", statusColor)}>{status}</span>
         </div>
         <p className="text-xs text-slate-600">{description}</p>
         <div className="mt-1 flex items-center gap-2">
           <span
             className={cn(
-              "flex h-5 w-5 items-center justify-center rounded-full text-xs font-medium text-white",
+              "flex h-5 w-5 items-center justify-center rounded-full text-xs font-medium text-white no-shadow",
               author.color,
             )}
           >
@@ -111,7 +111,7 @@ interface AlertProps {
 
 function Alert({ title, description, time, color, actions }: AlertProps) {
   return (
-    <div className="mb-4 border-l-4 bg-white p-4" style={{ borderLeftColor: color }}>
+    <div className="mb-4 border-l-4 bg-white p-4 shadow-custom" style={{ borderLeftColor: color }}>
       <div className="mb-2 flex items-center justify-between">
         <h4 className="text-sm font-medium">{title}</h4>
         <span className="text-xs text-slate-500">{time}</span>
@@ -119,12 +119,12 @@ function Alert({ title, description, time, color, actions }: AlertProps) {
       <p className="mb-3 text-xs text-slate-600">{description}</p>
       <div className="flex gap-2">
         {actions.secondary && (
-          <button className="rounded-md px-3 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-100">
+          <button className="rounded-md px-3 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-100 no-shadow">
             {actions.secondary.label}
           </button>
         )}
         <button
-          className="rounded-md px-3 py-1.5 text-xs font-medium text-white"
+          className="rounded-md px-3 py-1.5 text-xs font-medium text-white no-shadow"
           style={{ backgroundColor: actions.primary.color }}
         >
           {actions.primary.label}
@@ -137,13 +137,13 @@ function Alert({ title, description, time, color, actions }: AlertProps) {
 // Helper function to get the icon component based on the icon name from the data
 function getIconComponent(iconName: string) {
   const icons: Record<string, React.ReactNode> = {
-    FileText: <FileText className="h-5 w-5" />,
-    Clock: <Clock className="h-5 w-5" />,
-    History: <History className="h-5 w-5" />,
-    CheckCircle: <CheckCircle className="h-5 w-5" />,
-    Eye: <Eye className="h-5 w-5" />,
+    FileText: <FileText className="h-5 w-5 no-shadow" />,
+    Clock: <Clock className="h-5 w-5 no-shadow" />,
+    History: <History className="h-5 w-5 no-shadow" />,
+    CheckCircle: <CheckCircle className="h-5 w-5 no-shadow" />,
+    Eye: <Eye className="h-5 w-5 no-shadow" />,
   }
-  return icons[iconName] || <FileText className="h-5 w-5" />
+  return icons[iconName] || <FileText className="h-5 w-5 no-shadow" />
 }
 
 export function PolicyCommandCenter() {
@@ -233,12 +233,12 @@ export function PolicyCommandCenter() {
           <p className="text-sm text-slate-500">{mockData.allPolicies.subtitle}</p>
         </div>
         <div className="flex gap-3">
-          <button className="flex items-center gap-2 rounded-md border bg-white px-4 py-2 text-xs font-medium shadow-sm hover:bg-slate-50">
-            <Filter className="h-4 w-4" />
+          <button className="flex items-center gap-2 rounded-md border bg-white px-4 py-2 text-xs font-medium shadow-custom hover:bg-slate-50">
+            <Filter className="h-4 w-4 no-shadow" />
             Filter View
           </button>
-          <button className="flex items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-xs font-medium text-white shadow-sm hover:bg-primary-700">
-            <Plus className="h-4 w-4" />
+          <button className="flex items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-xs font-medium text-white shadow-custom hover:bg-primary-700">
+            <Plus className="h-4 w-4 no-shadow" />
             New Policy
           </button>
         </div>
@@ -284,15 +284,15 @@ export function PolicyCommandCenter() {
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div className="lg:col-span-2">
-          <div className="rounded-lg border bg-white shadow-sm">
+          <div className="rounded-lg border bg-white shadow-custom">
             <div className="flex items-center justify-between border-b p-4">
               <h3 className="text-base font-medium">Policy Activity Timeline</h3>
               <div className="flex items-center gap-2">
-                <button className="rounded-md p-1 hover:bg-slate-100">
-                  <Filter className="h-5 w-5 text-slate-500" />
+                <button className="rounded-md p-1 hover:bg-slate-100 no-shadow">
+                  <Filter className="h-5 w-5 text-slate-500 no-shadow" />
                 </button>
-                <button className="rounded-md p-1 hover:bg-slate-100">
-                  <MoreHorizontal className="h-5 w-5 text-slate-500" />
+                <button className="rounded-md p-1 hover:bg-slate-100 no-shadow">
+                  <MoreHorizontal className="h-5 w-5 text-slate-500 no-shadow" />
                 </button>
               </div>
             </div>

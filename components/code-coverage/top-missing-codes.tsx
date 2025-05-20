@@ -11,7 +11,7 @@ interface TopMissingCodesProps {
 
 export function TopMissingCodes({ data }: TopMissingCodesProps) {
   return (
-    <div className="rounded-lg border bg-white p-6 shadow-sm">
+    <div className="rounded-lg border bg-white p-6 shadow-custom">
       <div className="mb-4">
         <h3 className="text-base font-medium">Top Missing CPT Codes</h3>
         <p className="text-sm text-slate-500">Top spend codes managed by other payers but not the selected payer</p>

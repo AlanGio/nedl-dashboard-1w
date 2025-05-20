@@ -43,7 +43,7 @@ export function GeographicDistribution({ distribution }: GeographicDistributionP
     .range(["#E6F0FF", "#99C2FF", "#449CFB", "#0071EA", "#003180"])
 
   return (
-    <div className="rounded-xl border bg-white p-6 shadow-sm">
+    <div className="rounded-xl border bg-white p-6 shadow-custom">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-base font-medium">Geographic Payer Distribution</h3>
         <button className="rounded-md border bg-slate-50 px-3 py-1 text-xs">View Details</button>

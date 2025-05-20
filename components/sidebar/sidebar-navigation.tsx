@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { FileBarChart, BookOpen, Users, FileCheck, Plus, GitCompare, FileSearch } from "lucide-react"
+import { FileBarChart, BookOpen, Users, FileCheck, GitCompare, FileSearch } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 interface NavigationItem {
@@ -54,37 +54,42 @@ export function SidebarNavigation({ className, onNavigate, activeItem }: Sidebar
       id: "needs-review",
       icon: FileSearch,
       label: "Search Policies",
-      count: 18,
       color: "text-secondary-500",
     },
   ]
 
   return (
-    <div className={cn("fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 border-r bg-white z-10", className)}>
+    <div
+      className={cn(
+        "fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 z-10 font-title",
+        "bg-[#F5F5F5] shadow-[3px_0px_25px_0px_rgba(0,0,0,0.15)]",
+        className,
+      )}
+    >
       <div className="p-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-xs font-medium text-slate-500">QUICK NAVIGATION</h2>
-          <button className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 text-white hover:bg-blue-600">
-            <Plus className="h-4 w-4" />
-          </button>
-        </div>
         <nav className="mt-2 space-y-1">
-          {quickNavItems.map((item) => (
-            <button
-              key={item.id || "overview"}
-              onClick={() => onNavigate(item.id)}
-              className={cn(
-                "flex w-full items-center rounded-md px-3 py-2 text-xs font-medium text-left",
-                activeItem === item.id || (activeItem === null && item.id === null)
-                  ? "bg-blue-50"
-                  : "hover:bg-slate-50",
-              )}
-            >
-              <item.icon className={cn("mr-3 h-5 w-5", item.color)} />
-              <span className="flex-1">{item.label}</span>
-              {item.count && <span className="ml-2 rounded-full text-xs text-slate-500">({item.count})</span>}
-            </button>
-          ))}
+          {quickNavItems.map((item) => {
+            const isActive = activeItem === item.id || (activeItem === null && item.id === null)
+
+            return (
+              <button
+                key={item.id || "overview"}
+                onClick={() => onNavigate(item.id)}
+                className={cn(
+                  "flex w-full items-center rounded-full px-4 py-4 my-1 text-sm font-medium text-left transition-all duration-200 no-shadow",
+                  isActive ? "bg-gradient-to-r from-[#449CFB] to-[#E85DF9] text-white" : "text-gray-700 hover:bg-white",
+                )}
+              >
+                <item.icon className={cn("mr-3 h-5 w-5 no-shadow", isActive ? "text-white" : item.color)} />
+                <span className="flex-1">{item.label}</span>
+                {item.count && (
+                  <span className={cn("ml-2 rounded-full text-xs", isActive ? "text-white" : "text-slate-500")}>
+                    ({item.count})
+                  </span>
+                )}
+              </button>
+            )
+          })}
         </nav>
       </div>
     </div>

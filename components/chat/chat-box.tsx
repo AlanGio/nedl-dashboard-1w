@@ -64,24 +64,24 @@ export function ChatBox() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 flex h-12 w-12 items-center justify-center rounded-full bg-primary-600 text-white shadow-lg hover:bg-primary-700 transition-all"
+        className="fixed bottom-6 right-6 flex h-12 w-12 items-center justify-center rounded-full bg-primary-600 text-white shadow-custom hover:bg-primary-700 transition-all"
         aria-label="Open chat"
       >
-        <MessageSquare className="h-6 w-6" />
+        <MessageSquare className="h-6 w-6 no-shadow" />
       </button>
     )
   }
 
   return (
-    <div className="fixed bottom-6 right-6 w-80 rounded-lg border bg-white shadow-xl">
+    <div className="fixed bottom-6 right-6 w-80 rounded-lg border bg-white shadow-custom">
       <div className="flex items-center justify-between border-b bg-primary-600 p-3 text-white">
         <h3 className="font-medium">Nedl Assistant</h3>
         <button
           onClick={() => setIsOpen(false)}
-          className="rounded-full p-1 hover:bg-primary-700"
+          className="rounded-full p-1 hover:bg-primary-700 no-shadow"
           aria-label="Close chat"
         >
-          <X className="h-5 w-5" />
+          <X className="h-5 w-5 no-shadow" />
         </button>
       </div>
 
@@ -97,7 +97,7 @@ export function ChatBox() {
           messages.map((message, index) => (
             <div
               key={index}
-              className={`mb-3 max-w-[85%] rounded-lg p-2 ${
+              className={`mb-3 max-w-[85%] rounded-lg p-2 shadow-custom ${
                 message.isUser ? "ml-auto bg-primary-100 text-primary-800" : "bg-slate-100 text-slate-800"
               }`}
             >
@@ -118,14 +118,14 @@ export function ChatBox() {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Type your question..."
-            className="flex-1 rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+            className="flex-1 rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 shadow-custom"
           />
           <button
             type="submit"
-            className="rounded-md bg-primary-600 p-2 text-white hover:bg-primary-700"
+            className="rounded-md bg-primary-600 p-2 text-white hover:bg-primary-700 shadow-custom"
             aria-label="Send message"
           >
-            <Send className="h-4 w-4" />
+            <Send className="h-4 w-4 no-shadow" />
           </button>
         </div>
       </form>

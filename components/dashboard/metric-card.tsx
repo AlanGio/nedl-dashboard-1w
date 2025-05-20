@@ -26,7 +26,7 @@ export function MetricCard({
   iconBgColor = "bg-primary-100",
 }: MetricCardProps) {
   return (
-    <div className="rounded-xl border bg-white p-6 shadow-sm transition-all hover:shadow-md">
+    <div className="rounded-xl border bg-white p-6 shadow-custom transition-all hover:shadow-md">
       <div className="flex items-center justify-between">
         <h3 className="text-xs font-medium text-slate-500">{title}</h3>
         <div className={cn("rounded-full p-2", iconBgColor)}>{icon}</div>

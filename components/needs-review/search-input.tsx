@@ -62,15 +62,15 @@ export function SearchInput({
           onChange={(e) => onChange(e.target.value)}
           onFocus={handleFocus}
           placeholder={placeholder}
-          className="w-full rounded-md border border-slate-300 py-2 pl-10 pr-10 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+          className="w-full rounded-md border border-slate-300 py-2 pl-10 pr-10 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 shadow-custom"
         />
-        <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
+        <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400 no-shadow" />
         {value && (
           <button
             onClick={onClear}
-            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full p-1 hover:bg-slate-100"
+            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full p-1 hover:bg-slate-100 no-shadow"
           >
-            <X className="h-4 w-4 text-slate-400" />
+            <X className="h-4 w-4 text-slate-400 no-shadow" />
           </button>
         )}
       </div>
@@ -78,13 +78,13 @@ export function SearchInput({
       {showSuggestions && suggestions.length > 0 && (
         <div
           ref={suggestionsRef}
-          className="absolute z-10 mt-1 w-full rounded-md border border-slate-200 bg-white py-1 shadow-lg"
+          className="absolute z-10 mt-1 w-full rounded-md border border-slate-200 bg-white py-1 shadow-custom"
         >
           {suggestions.map((suggestion) => (
             <button
               key={suggestion}
               onClick={() => handleSuggestionClick(suggestion)}
-              className="flex w-full px-4 py-2 text-left hover:bg-primary-50"
+              className="flex w-full px-4 py-2 text-left hover:bg-primary-50 no-shadow"
             >
               {suggestion}
             </button>

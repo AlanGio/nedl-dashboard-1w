@@ -27,11 +27,11 @@ export function HeatmapChart({ data, title, maxValue }: HeatmapChartProps) {
   }
 
   return (
-    <div className="rounded-xl border bg-white p-6 shadow-sm">
+    <div className="rounded-xl border bg-white p-6 shadow-custom">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-base font-medium">{title}</h3>
-        <div className="flex items-center rounded-md border bg-slate-50 px-3 py-1 text-xs">
-          <Calendar className="mr-2 h-4 w-4 text-slate-500" />
+        <div className="flex items-center rounded-md border bg-slate-50 px-3 py-1 text-xs shadow-custom">
+          <Calendar className="mr-2 h-4 w-4 text-slate-500 no-shadow" />
           <span>Last 5 Weeks</span>
         </div>
       </div>
@@ -64,7 +64,7 @@ export function HeatmapChart({ data, title, maxValue }: HeatmapChartProps) {
                 return (
                   <div
                     key={cellKey}
-                    className="relative aspect-square rounded-sm flex items-center justify-center cursor-pointer transition-all hover:scale-105"
+                    className="relative aspect-square rounded-sm flex items-center justify-center cursor-pointer transition-all hover:scale-105 no-shadow"
                     style={{
                       backgroundColor: getColorIntensity(value),
                       border: "1px solid rgba(0,0,0,0.05)",
@@ -73,7 +73,7 @@ export function HeatmapChart({ data, title, maxValue }: HeatmapChartProps) {
                     onMouseLeave={() => setHoveredCell(null)}
                   >
                     {hoveredCell === cellKey && (
-                      <div className="absolute top-0 left-1/2 -translate-y-full -translate-x-1/2 bg-black bg-opacity-75 text-white text-[9px] p-1 rounded z-10 whitespace-nowrap">
+                      <div className="absolute top-0 left-1/2 -translate-y-full -translate-x-1/2 bg-black bg-opacity-75 text-white text-[9px] p-1 rounded z-10 whitespace-nowrap shadow-custom">
                         {value} events on {day}
                       </div>
                     )}
@@ -91,7 +91,7 @@ export function HeatmapChart({ data, title, maxValue }: HeatmapChartProps) {
             {[0.2, 0.4, 0.6, 0.8, 1].map((intensity, i) => (
               <div
                 key={i}
-                className="w-4 h-4 rounded-sm"
+                className="w-4 h-4 rounded-sm no-shadow"
                 style={{
                   backgroundColor: `rgba(68, 156, 251, ${intensity})`,
                   border: "1px solid rgba(0,0,0,0.05)",

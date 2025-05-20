@@ -1,9 +1,21 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Open_Sans, Comfortaa } from "next/font/google"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+// Define Open Sans as the main font
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans",
+  display: "swap",
+})
+
+// Define Comfortaa as the title font
+const comfortaa = Comfortaa({
+  subsets: ["latin"],
+  variable: "--font-comfortaa",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: "Nedl Labs :: Healthcare Analytics Dashboard",
@@ -21,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${openSans.variable} ${comfortaa.variable} font-sans`}>{children}</body>
     </html>
   )
 }

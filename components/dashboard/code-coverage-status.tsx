@@ -28,7 +28,7 @@ export function CodeCoverageStatus({ coverage, filters }: CodeCoverageStatusProp
   ]
 
   return (
-    <div className="rounded-xl border bg-white p-6 shadow-sm">
+    <div className="rounded-xl border bg-white p-6 shadow-custom">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-base font-medium">CPT/HCPCS Coverage Status</h3>
         <div className="flex rounded-md border p-0.5 text-xs">

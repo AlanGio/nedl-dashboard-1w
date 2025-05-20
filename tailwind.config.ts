@@ -9,12 +9,23 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-open-sans)"],
+        title: ["var(--font-comfortaa)"],
+        menu: ["var(--font-comfortaa)"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        sidebar: {
+          bg: "#f5f5f5",
+          text: "#4d4d4d",
+          muted: "#858585",
+          border: "#d9d9d9",
+        },
         primary: {
           DEFAULT: "#449CFB",
           50: "#EBF5FF",

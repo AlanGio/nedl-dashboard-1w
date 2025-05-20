@@ -10,10 +10,10 @@ interface MetricCardProps {
 
 function MetricCard({ title, value, benchmark, benchmarkLabel, trend = "neutral" }: MetricCardProps) {
   return (
-    <div className="rounded-lg border bg-white p-6 shadow-sm">
+    <div className="rounded-lg border bg-white p-6 shadow-custom">
       <div className="flex items-center gap-3 mb-4">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary-100">
-          <TrendingUp className="h-5 w-5 text-secondary-500" />
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary-100 no-shadow">
+          <TrendingUp className="h-5 w-5 text-secondary-500 no-shadow" />
         </div>
         <h3 className="text-base font-medium">{title}</h3>
       </div>

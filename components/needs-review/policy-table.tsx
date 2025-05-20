@@ -105,7 +105,7 @@ export function PolicyTable({
   }
 
   return (
-    <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+    <div className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-custom">
       <div className="overflow-x-auto">
         <table className="w-full border-collapse">
           <thead>
@@ -124,9 +124,9 @@ export function PolicyTable({
                     {column.sortable && sortColumn === column.id && (
                       <span className="ml-1">
                         {sortDirection === "asc" ? (
-                          <ChevronDown className="h-4 w-4 rotate-180 transform" />
+                          <ChevronDown className="h-4 w-4 rotate-180 transform no-shadow" />
                         ) : (
-                          <ChevronDown className="h-4 w-4" />
+                          <ChevronDown className="h-4 w-4 no-shadow" />
                         )}
                       </span>
                     )}
@@ -145,7 +145,7 @@ export function PolicyTable({
                 </td>
                 <td className="whitespace-nowrap px-6 py-4">
                   <div className="flex items-center">
-                    <div className="h-8 w-8 flex-shrink-0 bg-white rounded-full overflow-hidden border border-slate-200 flex items-center justify-center">
+                    <div className="h-8 w-8 flex-shrink-0 bg-white rounded-full overflow-hidden border border-slate-200 flex items-center justify-center no-shadow">
                       <Image
                         src={getPayerLogo(policy.payer.logo) || "/placeholder.svg"}
                         alt={policy.payer.name}
@@ -162,7 +162,7 @@ export function PolicyTable({
                 <td className="whitespace-normal px-6 py-4">
                   <span
                     className={cn(
-                      "inline-flex rounded-full px-3 py-1 text-xs font-medium",
+                      "inline-flex rounded-full px-3 py-1 text-xs font-medium no-shadow",
                       getClinicalCategoryColor(policy.clinicalCategory),
                     )}
                   >
@@ -184,7 +184,7 @@ export function PolicyTable({
           <select
             value={rowsPerPage}
             onChange={(e) => onRowsPerPageChange(Number(e.target.value))}
-            className="ml-2 rounded-md border-slate-300 py-1 pl-2 pr-8 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+            className="ml-2 rounded-md border-slate-300 py-1 pl-2 pr-8 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 no-shadow"
           >
             <option value={10}>10</option>
             <option value={25}>25</option>
@@ -200,18 +200,18 @@ export function PolicyTable({
             <button
               onClick={() => onPageChange(currentPage - 1)}
               disabled={currentPage === 1}
-              className="mr-2 rounded-md p-1 text-slate-400 hover:text-blue-700 disabled:opacity-50"
+              className="mr-2 rounded-md p-1 text-slate-400 hover:text-blue-700 disabled:opacity-50 no-shadow"
             >
               <span className="sr-only">Previous</span>
-              <ChevronLeft className="h-5 w-5" aria-hidden="true" />
+              <ChevronLeft className="h-5 w-5 no-shadow" aria-hidden="true" />
             </button>
             <button
               onClick={() => onPageChange(currentPage + 1)}
               disabled={endIndex === totalPolicies}
-              className="rounded-md p-1 text-slate-400 hover:text-blue-700 disabled:opacity-50"
+              className="rounded-md p-1 text-slate-400 hover:text-blue-700 disabled:opacity-50 no-shadow"
             >
               <span className="sr-only">Next</span>
-              <ChevronRight className="h-5 w-5" aria-hidden="true" />
+              <ChevronRight className="h-5 w-5 no-shadow" aria-hidden="true" />
             </button>
           </nav>
         </div>

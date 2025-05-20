@@ -12,7 +12,7 @@ interface SpendUnderManagementProps {
 
 export function SpendUnderManagement({ data }: SpendUnderManagementProps) {
   return (
-    <div className="rounded-lg border bg-white p-6 shadow-sm">
+    <div className="rounded-lg border bg-white p-6 shadow-custom">
       <div className="mb-4">
         <h3 className="text-base font-medium">Spend Under Management ($PMPM)</h3>
         <p className="text-sm text-slate-500">Total $PMPM being managed today by a given payer's policies</p>

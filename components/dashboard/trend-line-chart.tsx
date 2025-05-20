@@ -15,7 +15,7 @@ interface TrendLineChartProps {
 
 export function TrendLineChart({ data, title, timeRange }: TrendLineChartProps) {
   return (
-    <div className="rounded-xl border bg-white p-6 shadow-sm">
+    <div className="rounded-xl border bg-white p-6 shadow-custom">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-base font-medium">{title}</h3>
         <div className="flex items-center rounded-md border bg-slate-50 px-3 py-1 text-xs">

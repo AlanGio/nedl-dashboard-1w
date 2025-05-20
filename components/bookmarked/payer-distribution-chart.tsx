@@ -20,7 +20,7 @@ export function PayerDistributionChart({ distribution }: PayerDistributionChartP
   ]
 
   return (
-    <div className="bg-white rounded-lg border shadow-sm p-6">
+    <div className="bg-white rounded-lg border shadow-custom p-6">
       <h2 className="text-base font-semibold mb-4">Payer Distribution by Type</h2>
       <div className="h-60 relative">
         <ResponsiveContainer width="100%" height="100%">
@@ -48,7 +48,10 @@ export function PayerDistributionChart({ distribution }: PayerDistributionChartP
       <div className="mt-4 flex justify-center gap-6">
         {data.map((entry, index) => (
           <div key={index} className="flex items-center">
-            <div className="w-3 h-3 rounded-full mr-2" style={{ backgroundColor: COLORS[index % COLORS.length] }} />
+            <div
+              className="w-3 h-3 rounded-full mr-2 no-shadow"
+              style={{ backgroundColor: COLORS[index % COLORS.length] }}
+            />
             <span className="text-xs">{entry.name}</span>
           </div>
         ))}

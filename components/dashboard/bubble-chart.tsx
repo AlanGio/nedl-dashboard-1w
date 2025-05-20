@@ -26,7 +26,7 @@ interface BubbleChartProps {
 
 export function BubbleChart({ data, title }: BubbleChartProps) {
   return (
-    <div className="rounded-xl border bg-white p-6 shadow-sm">
+    <div className="rounded-xl border bg-white p-6 shadow-custom">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-sm font-medium">{title}</h3>
         <button className="flex items-center rounded-md border bg-slate-50 px-3 py-1 text-[10px]">
@@ -73,7 +73,12 @@ export function BubbleChart({ data, title }: BubbleChartProps) {
               contentStyle={{ fontSize: "11px" }}
               itemStyle={{ fontSize: "11px" }}
             />
-            <Legend wrapperStyle={{ fontSize: "11px" }} />
+            <Legend
+              wrapperStyle={{
+                fontSize: "11px",
+                paddingTop: "16px", // Move the legend down by 16px
+              }}
+            />
             {data.map((entry, index) => (
               <Scatter key={`scatter-${index}`} name={entry.name} data={[entry]} fill={entry.color} />
             ))}

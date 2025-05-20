@@ -6,7 +6,7 @@ interface MetricCardProps {
 
 function MetricCard({ label, value, subtitle }: MetricCardProps) {
   return (
-    <div className="bg-white rounded-lg border shadow-sm p-6">
+    <div className="bg-white rounded-lg border shadow-custom p-6">
       <h3 className="text-xs font-medium text-slate-500">{label}</h3>
       <p className="text-2xl font-bold mt-2">{value}</p>
       {subtitle && <p className="text-xs text-slate-500 mt-1">{subtitle}</p>}

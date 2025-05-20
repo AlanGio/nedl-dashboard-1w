@@ -16,7 +16,7 @@ export function PolicyDistributionTable({ data }: PolicyDistributionTableProps) 
   const { categories, columns, data: tableData } = data
 
   return (
-    <div className="bg-white rounded-lg border shadow-sm p-6">
+    <div className="bg-white rounded-lg border shadow-custom p-6">
       <h2 className="text-base font-semibold mb-4">Policy Distribution by Payer Type</h2>
       <div className="overflow-x-auto">
         <table className="w-full">
@@ -39,7 +39,7 @@ export function PolicyDistributionTable({ data }: PolicyDistributionTableProps) 
                   <td key={colIndex} className="p-2">
                     <div
                       className={cn(
-                        "flex items-center justify-center p-2 rounded-md text-sm font-medium",
+                        "flex items-center justify-center p-2 rounded-md text-sm font-medium no-shadow",
                         row.colors[column],
                       )}
                     >
