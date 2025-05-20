@@ -1,8 +1,9 @@
 "use client"
 
+import type React from "react"
+
 import { useState, useMemo } from "react"
-import { LayoutList } from "lucide-react"
-import { SearchInput } from "./search-input"
+import { LayoutList, Search } from "lucide-react"
 import { PolicyTable } from "./policy-table"
 import mockData from "@/data/mockData.json"
 
@@ -59,8 +60,8 @@ export function NeedsReview() {
   }
 
   // Handle search query change
-  const handleSearchChange = (value: string) => {
-    setSearchQuery(value)
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value)
     setCurrentPage(1) // Reset to first page when search changes
   }
 
@@ -90,11 +91,11 @@ export function NeedsReview() {
   return (
     <div className="p-8 mt-10">
       <div className="mb-6">
-        <h1 className="text-xl font-bold text-slate-800">Search Policies</h1>
+        <h1 className="text-2xl font-bold text-slate-800">Search Policies</h1>
         <p className="text-sm text-slate-500">Browse all payers policies, and compare them against each other.</p>
       </div>
 
-      <div className="mb-6 rounded-lg border border-slate-200 bg-white p-6 shadow-custom">
+      <div className="mb-6">
         <div className="mb-4 flex items-center justify-between">
           <div className="flex items-center">
             <LayoutList className="mr-2 h-5 w-5 text-blue-500" />
@@ -106,13 +107,44 @@ export function NeedsReview() {
         </div>
 
         <div className="mb-6">
-          <SearchInput
-            value={searchQuery}
-            onChange={handleSearchChange}
-            onClear={handleClearSearch}
-            suggestions={suggestions}
-            placeholder="Search by policy name..."
-          />
+          <div
+            className="relative rounded-full overflow-hidden"
+            style={{
+              background:
+                "linear-gradient(white, white) padding-box, linear-gradient(90deg, #449CFB, #F087FB) border-box",
+              borderWidth: "1px",
+              borderStyle: "solid",
+              borderColor: "transparent",
+            }}
+          >
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={handleSearchChange}
+              placeholder="Enter a keyword, policy name, policy provider, or code"
+              className="w-full rounded-full border-0 py-3 px-6 focus:outline-none bg-white"
+            />
+            {searchQuery && (
+              <button
+                onClick={handleClearSearch}
+                className="absolute right-14 top-1/2 -translate-y-1/2 rounded-full p-1 hover:bg-slate-100 no-shadow"
+              >
+                <span className="sr-only">Clear search</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 text-slate-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
+            <div className="absolute right-6 top-1/2 -translate-y-1/2">
+              <Search className="h-5 w-5 text-[#449cfb] no-shadow" />
+            </div>
+          </div>
         </div>
 
         <PolicyTable

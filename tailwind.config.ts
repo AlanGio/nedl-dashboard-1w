@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        xl: "22px", // Override text-xl to be 22px
+      },
       fontFamily: {
         sans: ["var(--font-open-sans)"],
         title: ["var(--font-comfortaa)"],

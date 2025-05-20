@@ -10,7 +10,7 @@ export function CodeCoverage() {
   return (
     <div className="p-8 mt-10">
       <div>
-        <h1 className="text-xl font-bold text-slate-800">Code Coverage</h1>
+        <h1 className="text-2xl font-bold text-slate-800">Code Coverage</h1>
         <p className="text-sm text-slate-500">Analyze code coverage metrics and identify improvement opportunities.</p>
       </div>
 

@@ -105,7 +105,7 @@ export function PolicyTable({
   }
 
   return (
-    <div className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-custom">
+    <div className="overflow-hidden rounded-lg">
       <div className="overflow-x-auto">
         <table className="w-full border-collapse">
           <thead>
@@ -136,8 +136,8 @@ export function PolicyTable({
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-200">
-            {policies.map((policy) => (
-              <tr key={policy.id} className="hover:bg-blue-50">
+            {policies.map((policy, index) => (
+              <tr key={policy.id} className={cn("hover:bg-blue-50", index % 2 === 0 ? "bg-white" : "bg-[#F6F6F6]")}>
                 <td className="whitespace-normal px-6 py-4">
                   <div className="text-sm font-medium text-slate-900 h-12 flex flex-col justify-center">
                     {formatLongText(policy.policyName, 35)}

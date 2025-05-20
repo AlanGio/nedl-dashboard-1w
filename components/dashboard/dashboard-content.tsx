@@ -17,6 +17,11 @@ export function DashboardContent() {
 
   return (
     <main className="pt-16 p-8">
+      <div className="mb-8">
+        <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
+        <p className="text-md text-gray-600">Analyze payer policies and coverage metrics across your network</p>
+      </div>
+
       <MetricsGrid metrics={mockData.dashboard.metrics} />
 
       {/* First row of charts */}

@@ -229,7 +229,7 @@ export function PolicyCommandCenter() {
     <div className="p-8 mt-10">
       <div className="mb-6 flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-bold text-slate-800">{mockData.allPolicies.title}</h1>
+          <h1 className="text-2xl font-bold text-slate-800">{mockData.allPolicies.title}</h1>
           <p className="text-sm text-slate-500">{mockData.allPolicies.subtitle}</p>
         </div>
         <div className="flex gap-3">

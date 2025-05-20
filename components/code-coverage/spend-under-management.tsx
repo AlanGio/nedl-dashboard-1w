@@ -24,13 +24,13 @@ export function SpendUnderManagement({ data }: SpendUnderManagementProps) {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip formatter={(value) => [`$${value} PMPM`, "Spend"]} labelFormatter={(name) => `Payer ${name}`} />
-            <Bar dataKey="value" fill={(entry) => (entry.highlighted ? "#F087FB" : "#e2e8f0")} radius={[4, 4, 0, 0]}>
+            <Bar dataKey="value" fill="#449CFB" radius={[4, 4, 0, 0]}>
               {data.map((entry, index) => (
                 <text
                   key={`label-${index}`}
                   x={index * (100 / data.length) + 50 / data.length}
                   y={entry.value < 100 ? 200 - entry.value - 15 : 200 - entry.value + 15}
-                  fill={entry.value < 100 ? "#8A287F" : "#fff"}
+                  fill={entry.value < 100 ? "#fff" : "#fff"}
                   textAnchor="middle"
                   dominantBaseline="middle"
                   fontSize={12}
